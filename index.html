@@ -142,17 +142,17 @@
             const grid = document.getElementById('news-grid');
             if (!grid) return;
             
-            // Hemos reducido el tamaño total a max-w-lg para que no ocupe toda la pantalla
+            // Mantenemos el ancho de la tarjeta contenido para que sea estético
             grid.className = "max-w-lg mx-auto"; 
             
             grid.innerHTML = noticias.map(n => `
                 <article onclick="window.location.href='${n.link}'" class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer">
                     
-                    <div class="w-full h-40 md:h-52 overflow-hidden bg-white flex items-center justify-center p-6">
-                        <img src="${n.imagen}" alt="Noticia Sanidad" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                    <div class="w-full h-56 md:h-64 overflow-hidden bg-white flex items-center justify-center p-2">
+                        <img src="${n.imagen}" alt="Noticia Sanidad" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
                     </div>
 
-                    <div class="p-6 md:p-8">
+                    <div class="p-8 pt-2">
                         <div class="mb-3">
                             <span class="${n.color} text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
                                 ${n.tag}

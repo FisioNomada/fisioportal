@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu fisioterapeuta podría hacer mucho más por tu salud</title>
+
+<!-- Vista previa para WhatsApp y redes sociales (funciona cuando el archivo está alojado online) -->
+<meta property="og:title"       content="Tu fisioterapeuta podría hacer mucho más por tu salud">
+<meta property="og:description" content="La ley española limita lo que los fisioterapeutas pueden hacer por ti. Lee por qué esto te afecta y cómo cambiarlo.">
+<meta property="og:type"        content="website">
+<meta property="og:locale"      content="es_ES">
+<meta name="twitter:card"        content="summary">
+<meta name="twitter:title"       content="Tu fisioterapeuta podría hacer mucho más por tu salud">
+<meta name="twitter:description" content="La ley española limita lo que los fisioterapeutas pueden hacer por ti. Lee por qué esto te afecta.">
+<meta name="description"         content="Documento ciudadano en respuesta a la Consulta Pública del Ministerio de Sanidad sobre regulación de profesiones sanitarias.">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --crema:        #F5F0DC;
+    --crema-dark:   #EDE8CF;
+    --dorado:       #C9A227;
+    --dorado-light: #D4B44A;
+    --marino:       #1B2A6B;
+    --marino-mid:   #2A3F8F;
+    --texto:        #1A1A2E;
+    --gris:         #555566;
+    --verde:        #1A7A4C;
+    --morado:       #5B2C8D;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--crema);
+    color: var(--texto);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  /* ── PAGES ── */
+  .page          { display: none; }
+  .page.active   { display: block; }
+
+  /* ── LAYOUT ── */
+  .wrap { max-width: 800px; margin: 0 auto; padding: 0 22px; }
+
+  /* ── HOW-TO-OPEN BANNER ── */
+  .open-banner {
+    background: #2d2d2d;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 10px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .open-banner strong { color: #ffd166; }
+
+  /* ── STICKY NAV ── */
+  .top-nav {
+    background: var(--marino);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  }
+  .top-nav-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #aab;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .nav-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--marino);
+    background: var(--dorado);
+    border: none;
+    cursor: pointer;
+    padding: 7px 16px;
+    border-radius: 5px;
+    transition: background .2s;
+  }
+  .nav-btn:hover  { background: var(--dorado-light); }
+  .nav-btn.back   { background: rgba(255,255,255,.12); color: var(--dorado-light); }
+  .nav-btn.back:hover { background: rgba(255,255,255,.22); color: var(--crema); }
+
+  /* ── DIVIDERS ── */
+  .divider      { border: none; border-top: 3px solid var(--dorado); }
+  .divider-thin { border: none; border-top: 1px solid #ccc; }
+
+  /* ── SECTIONS ── */
+  .sec-wrap     { padding: 44px 22px; }
+  .sec-wrap.alt { background: var(--crema-dark); }
+
+  /* ── HEADINGS ── */
+  .section-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(18px, 3vw, 24px);
+    color: var(--marino);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  h2.sec {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(20px, 3.5vw, 28px);
+    color: var(--marino);
+    font-weight: 900;
+    border-bottom: 3px solid var(--dorado);
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+  }
+  h3.subsec {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: var(--marino-mid);
+    font-weight: 700;
+    margin: 32px 0 12px;
+  }
+
+  p.bt { margin-bottom: 16px; }
+
+  /* ── STAT CARDS ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+  }
+  @media(max-width:560px){ .stats-grid { grid-template-columns:1fr; } }
+  .stat-card {
+    background: var(--dorado);
+    border-radius: 6px;
+    padding: 22px 16px;
+    text-align: center;
+  }
+  .stat-num {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(26px,5vw,40px);
+    font-weight: 900;
+    color: var(--marino);
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .stat-desc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: var(--marino);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  /* ── PROBLEM BOX ── */
+  .problem-box {
+    border-left: 5px solid var(--dorado);
+    background: var(--crema-dark);
+    padding: 22px 24px;
+    border-radius: 0 6px 6px 0;
+  }
+  .problem-box strong { color: var(--marino); }
+
+  /* ── SIMPLE CSS ICON CIRCLE ── */
+  .icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--marino);
+    color: var(--crema);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 17px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    letter-spacing: -1px;
+  }
+
+  /* ── FEATURE ROWS ── */
+  .features { display: flex; flex-direction: column; gap: 18px; }
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--crema);
+    border-left: 4px solid var(--marino-mid);
+    border-radius: 0 6px 6px 0;
+    padding: 18px 18px 18px 14px;
+  }
+  .feature-body h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--marino-mid);
+    margin-bottom: 7px;
+  }
+  .feature-body p   { font-size: 15px; color: var(--gris); line-height: 1.65; margin-bottom: 7px; }
+  .feature-body .ref{ font-size: 13px; font-style: italic; color: #888; }
+
+  /* ── COUNTRY PILLS ── */
+  .country-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 14px;
+  }
+  @media(max-width:560px){ .country-grid { grid-template-columns:1fr 1fr; } }
+  @media(max-width:360px){ .country-grid { grid-template-columns:1fr; } }
+  .country-card {
+    background: var(--crema);
+    border: 1px solid #d9d4b8;
+    border-radius: 8px;
+    padding: 16px 14px;
+    text-align: center;
+  }
+  .country-card .flag-emoji {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 6px;
+    line-height: 1;
+  }
+  .country-card .flag-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--marino);
+    margin-bottom: 7px;
+  }
+  .country-card p { font-size: 13px; color: var(--gris); line-height: 1.5; }
+
+  /* ── FUTURE CARDS ── */
+  .future-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  @media(max-width:560px){ .future-grid { grid-template-columns:1fr; } }
+  .future-card {
+    background: var(--crema);
+    border: 1px solid #d9d4b8;
+    border-radius: 8px;
+    padding: 20px 14px;
+    text-align: center;
+  }
+  .future-card .big {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(26px,4vw,38px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .fc1 .big { color: var(--morado); }
+  .fc2 .big { color: var(--dorado); }
+  .fc3 .big { color: var(--verde); }
+  .future-card p  { font-size: 13px; color: var(--gris); line-height: 1.5; margin-bottom: 6px; }
+  .future-card .rf{ font-size: 12px; font-style: italic; color: #999; }
+
+  /* ── HIGHLIGHT ── */
+  .highlight {
+    background: var(--marino);
+    color: var(--crema);
+    border-radius: 8px;
+    padding: 22px 26px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .highlight strong { color: var(--dorado); }
+
+  /* ── CTA BOX ── */
+  .cta-box {
+    border: 3px solid var(--dorado);
+    border-radius: 8px;
+    background: var(--crema-dark);
+    padding: 28px 26px;
+    text-align: center;
+  }
+  .cta-box h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(17px,3vw,22px);
+    color: var(--marino);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .cta-box > p { font-size: 15px; color: var(--gris); margin-bottom: 20px; line-height: 1.65; }
+
+  /* ── MAILTO BUTTON ── */
+  .mailto-btn {
+    display: block;
+    width: 100%;
+    background: var(--marino);
+    color: var(--crema);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background .2s;
+    margin-bottom: 14px;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .mailto-btn:hover { background: var(--marino-mid); }
+  .mailto-btn span  { display: block; font-size: 12px; font-weight: 400; opacity: .8; margin-top: 4px; }
+
+  .cta-details {
+    background: var(--crema);
+    border: 1px solid #d9d4b8;
+    border-radius: 6px;
+    padding: 14px 18px;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+  .cta-details p { color: var(--gris); font-size: 13px; margin-bottom: 7px; line-height: 1.6; }
+  .cta-details p:last-child { margin-bottom: 0; }
+  .cta-details strong { color: var(--marino); }
+  .cta-details a { color: var(--marino-mid); }
+
+  /* ── INFO BOX ── */
+  .info-box {
+    border-left: 5px solid var(--dorado);
+    border-top: 1px solid #d9d4b8;
+    border-bottom: 1px solid #d9d4b8;
+    border-right: 1px solid #d9d4b8;
+    border-radius: 0 6px 6px 0;
+    background: var(--crema-dark);
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .info-box.green { border-left-color: var(--verde); }
+  .info-box.blue  { border-left-color: var(--marino-mid); }
+  .info-box h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--marino);
+    margin-bottom: 8px;
+  }
+  .info-box p { font-size: 15px; color: var(--gris); line-height: 1.65; }
+
+  /* ── BULLET LIST ── */
+  ul.styled { list-style: none; padding: 0; margin: 12px 0 18px; }
+  ul.styled li {
+    padding: 10px 14px 10px 18px;
+    border-left: 3px solid var(--dorado);
+    margin-bottom: 10px;
+    background: var(--crema-dark);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  ul.styled li em { font-size: 13px; color: #888; }
+
+  /* ── BLOCKQUOTE ── */
+  blockquote {
+    border-left: 5px solid var(--dorado);
+    background: var(--crema-dark);
+    padding: 18px 22px;
+    margin: 22px 0;
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    color: var(--gris);
+    font-size: 17px;
+  }
+  blockquote cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--marino);
+    font-weight: 700;
+  }
+
+  /* ── COUNTRY TABLE ── */
+  .tbl-wrap  { overflow-x: auto; margin: 18px 0; }
+  .ctable    { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .ctable th {
+    background: var(--marino);
+    color: var(--crema);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding: 12px 10px;
+  }
+  .ctable td {
+    padding: 14px 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #d9d4b8;
+    line-height: 1.55;
+  }
+  .ctable td:first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: var(--dorado);
+    text-align: center;
+    white-space: nowrap;
+  }
+  .ctable tr:nth-child(even) td { background: var(--crema-dark); }
+  .ctable .rc { font-size: 12px; font-style: italic; color: #888; }
+  @media(max-width:580px){
+    .ctable thead { display: none; }
+    .ctable td    { display: block; border: none; padding: 5px 10px; }
+    .ctable tr    { display: block; border-bottom: 2px solid var(--dorado); margin-bottom: 14px; }
+    .ctable td:first-child { font-size: 16px; padding-top: 10px; }
+  }
+
+  /* ── TOC ── */
+  .toc {
+    background: var(--crema-dark);
+    border-left: 5px solid var(--dorado);
+    border-radius: 0 6px 6px 0;
+    padding: 22px 26px;
+    margin-bottom: 10px;
+  }
+  .toc h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: var(--marino);
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .toc ol { padding-left: 18px; }
+  .toc li  { margin-bottom: 6px; }
+  .toc a   { font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: var(--marino-mid); text-decoration: none; }
+  .toc a:hover { color: var(--dorado); text-decoration: underline; }
+
+  /* ── PETITION ── */
+  ol.petition { list-style: none; padding: 0; margin: 18px 0; counter-reset: pet; }
+  ol.petition li {
+    counter-increment: pet;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--crema-dark);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  ol.petition li::before {
+    content: counter(pet);
+    background: var(--dorado);
+    color: var(--marino);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ── REFS ── */
+  .refs { font-size: 14px; line-height: 1.65; }
+  .refs p { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dotted #ccc; }
+  .refs p:last-child { border-bottom: none; }
+  .refs strong { color: var(--marino); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--marino);
+    color: #aab;
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  footer button {
+    background: none; border: none;
+    color: var(--dorado-light); cursor: pointer;
+    font-size: 13px; font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; padding: 0;
+  }
+  footer button:hover { color: var(--crema); }
+</style>
+</head>
+<body>
+
+<!-- INSTRUCCIONES DE APERTURA — visible siempre -->
+<div class="open-banner">
+  Si este archivo aparece en blanco, ábrelo con <strong>Google Chrome</strong> o <strong>Safari</strong> &nbsp;·&nbsp; Descárgalo y pulsa "Abrir con..." en tu móvil
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     PÁGINA 1 · GANCHO
+═══════════════════════════════════════ -->
+<div id="page-gancho" class="page active">
+
+  <nav class="top-nav">
+    <span class="top-nav-label">Consulta Pública · Ministerio de Sanidad</span>
+    <button class="nav-btn" onclick="showPage('page-extendido')">Ver documento completo →</button>
+  </nav>
+
+  <!-- HERO -->
+  <div style="background:var(--crema); padding:52px 22px 36px; text-align:center; border-bottom:3px solid var(--dorado);">
+    <div class="wrap">
+      <h1 style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(26px,5vw,46px); color:var(--marino); line-height:1.2; font-weight:900; margin-bottom:16px;">
+        Tu fisioterapeuta podría hacer<br>mucho más por tu salud.
+      </h1>
+      <p style="font-size:clamp(15px,2.5vw,19px); color:var(--gris); font-style:italic;">
+        La legislación española le impide actuar. Aquí te explicamos por qué eso te afecta.
+      </p>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="sec-wrap">
+    <div class="wrap">
+      <p class="section-title">Tres datos que lo cambian todo</p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num">1 de 3</span>
+          <p class="stat-desc">consultas al médico de cabecera son por dolores musculares o articulares</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">+90 días</span>
+          <p class="stat-desc">tiempo de espera medio para fisioterapia en el SNS público</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">34 %</span>
+          <p class="stat-desc">menos derivaciones a especialistas cuando el fisioterapeuta atiende directamente <em>(NHS, 2020)</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="divider-thin">
+
+  <!-- EL PROBLEMA -->
+  <div class="sec-wrap alt">
+    <div class="wrap">
+      <p class="section-title">El problema</p>
+      <div class="problem-box">
+        <p><strong>En España,</strong> para acceder al fisioterapeuta en el sistema público es obligatoria una prescripción médica. Tu cuerpo espera meses mientras tu médico se sobrecarga con consultas que un fisioterapeuta podría resolver directamente. Y eso es solo la punta del iceberg: hay mucho más que estos profesionales podrían hacer —y en otros países ya hacen— sin que la ley española lo contemple.</p>
+      </div>
+    </div>
+  </div>
+  <hr class="divider-thin">
+
+  <!-- LO QUE PODRÍAN HACER -->
+  <div class="sec-wrap">
+    <div class="wrap">
+      <p class="section-title">¿Qué podrían hacer los fisioterapeutas<br>con un buen marco legal?</p>
+      <p style="text-align:center; font-style:italic; color:var(--gris); margin-bottom:22px; font-size:15px;">Más allá del acceso directo, tres capacidades cambiarían radicalmente el modelo:</p>
+      <div class="features">
+
+        <div class="feature">
+          <!-- Hospital SVG -->
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;margin-top:2px;">
+            <rect x="8" y="18" width="32" height="26" rx="1" stroke="#1B2A6B" stroke-width="2.5"/>
+            <rect x="18" y="4" width="12" height="15" rx="1" stroke="#1B2A6B" stroke-width="2.5"/>
+            <line x1="24" y1="8" x2="24" y2="15" stroke="#1B2A6B" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="21" y1="11.5" x2="27" y2="11.5" stroke="#1B2A6B" stroke-width="2.2" stroke-linecap="round"/>
+            <rect x="19" y="30" width="10" height="14" rx="1" stroke="#1B2A6B" stroke-width="2"/>
+          </svg>
+          <div class="feature-body">
+            <h3>Atención en urgencias</h3>
+            <p>En el Reino Unido y Australia, los fisioterapeutas actúan como clínicos de primer contacto en urgencias para lesiones musculoesqueléticas (esguinces, lumbalgias agudas, traumatismos menores). Realizan la evaluación inicial, solicitan radiografías, aplican el tratamiento y dan el alta.</p>
+            <p class="ref">Fuente: Physiotherapy Research International (2014); Australian Institute of Health and Welfare (2020)</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <!-- Pill SVG -->
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;margin-top:2px;">
+            <rect x="10" y="20" width="28" height="10" rx="5" stroke="#1B2A6B" stroke-width="2.5"/>
+            <line x1="24" y1="20" x2="24" y2="30" stroke="#1B2A6B" stroke-width="2" stroke-linecap="round"/>
+            <line x1="16" y1="14" x2="32" y2="14" stroke="#1B2A6B" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+            <line x1="14" y1="36" x2="34" y2="36" stroke="#1B2A6B" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+            <circle cx="14" cy="25" r="3" fill="#1B2A6B"/>
+          </svg>
+          <div class="feature-body">
+            <h3>Prescripción de medicamentos para el dolor</h3>
+            <p>Desde 2013, los fisioterapeutas en Inglaterra tienen derecho a prescripción independiente de analgésicos y antiinflamatorios para el dolor musculoesquelético. Un estudio en el NHS demostró que frecuentemente reducen medicación previa innecesaria (opioides, AINEs), mejorando la seguridad del paciente.</p>
+            <p class="ref">Fuente: Department of Health England (2013); Noblet et al., Musculoskeletal Science and Practice (2022)</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <!-- Microscope SVG -->
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;margin-top:2px;">
+            <rect x="19" y="4" width="10" height="18" rx="3" stroke="#1B2A6B" stroke-width="2.5"/>
+            <line x1="24" y1="22" x2="24" y2="32" stroke="#1B2A6B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M16 32 Q24 28 32 32" stroke="#1B2A6B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <line x1="12" y1="44" x2="36" y2="44" stroke="#1B2A6B" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="32" x2="24" y2="44" stroke="#1B2A6B" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="24" cy="10" r="3" stroke="#1B2A6B" stroke-width="2"/>
+          </svg>
+          <div class="feature-body">
+            <h3>Solicitud de pruebas diagnósticas</h3>
+            <p>En Reino Unido, Australia, Países Bajos y países nórdicos, los fisioterapeutas pueden solicitar directamente radiografías y pruebas de imagen sin pasar antes por el médico. Esto elimina esperas innecesarias y agiliza el diagnóstico.</p>
+            <p class="ref">Fuente: World Physiotherapy (2019); NHS England, First Contact Physiotherapy Guide (2020)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <hr class="divider-thin">
+
+  <!-- PAÍSES -->
+  <div class="sec-wrap alt">
+    <div class="wrap">
+      <p class="section-title">¿Qué hicieron otros países?</p>
+      <div class="country-grid">
+        <div class="country-card"><span class="flag-emoji">🇬🇧</span><p class="flag-name">Reino Unido</p><p>Fisioterapeutas en urgencias desde los 90, acceso directo y prescripción independiente desde 2013. Modelo FCP en atención primaria desde 2016.</p></div>
+        <div class="country-card"><span class="flag-emoji">🇳🇱</span><p class="flag-name">Países Bajos</p><p>Acceso directo desde 2006. El 70 % de los pacientes acude directamente al fisioterapeuta sin receta médica.</p></div>
+        <div class="country-card"><span class="flag-emoji">🇦🇺</span><p class="flag-name">Australia</p><p>Fisioterapeutas autónomos en urgencias y proceso activo de aprobación de prescripción de medicamentos.</p></div>
+        <div class="country-card"><span class="flag-emoji">🇫🇮</span><p class="flag-name">Finlandia</p><p>Integrados en atención primaria desde los años 90 con menores listas de espera y menos absentismo laboral.</p></div>
+        <div class="country-card"><span class="flag-emoji">🇸🇪</span><p class="flag-name">Suecia</p><p>Pueden prescribir ejercicio terapéutico y solicitar pruebas diagnósticas con plenas competencias.</p></div>
+        <div class="country-card"><span class="flag-emoji">🇮🇪</span><p class="flag-name">Irlanda</p><p>Acceso directo desde 2018. Reducción del 25 % en el tiempo hasta el inicio del tratamiento.</p></div>
+      </div>
+    </div>
+  </div>
+  <hr class="divider-thin">
+
+  <!-- FUTURO -->
+  <div class="sec-wrap">
+    <div class="wrap">
+      <p class="section-title">Esto no es solo resolver el problema de hoy.<br>Es construir el sistema de salud del mañana.</p>
+      <div class="future-grid">
+        <div class="future-card fc1">
+          <span class="big">1 de cada 3</span>
+          <p>españoles tendrá más de 65 años en 2050. La generación que hoy tiene 30-45 años.</p>
+          <p class="rf">(INE, Proyecciones de Población 2022-2072)</p>
+        </div>
+        <div class="future-card fc2">
+          <span class="big">×2</span>
+          <p>se multiplicará la tasa de dependencia demográfica hasta 2050, presionando el sistema sanitario.</p>
+          <p class="rf">(FEDEA / INE, 2021)</p>
+        </div>
+        <div class="future-card fc3">
+          <span class="big">51.000+</span>
+          <p>fisioterapeutas colegiados en España, con formación universitaria de grado, máster y doctorado.</p>
+          <p class="rf">(CGCFE, 2023)</p>
+        </div>
+      </div>
+      <div class="highlight">
+        Las decisiones que se tomen hoy sobre cómo regulamos las profesiones sanitarias determinarán si el sistema de salud puede aguantar ese peso. Integrar plenamente a los fisioterapeutas —con competencias en urgencias, prescripción y acceso directo— no es un lujo: <strong>es una inversión estructural imprescindible.</strong>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- CTA -->
+  <div class="sec-wrap alt">
+    <div class="wrap">
+      <div class="cta-box">
+        <h2>¿Qué puedes hacer tú?</h2>
+        <p>El Ministerio de Sanidad tiene abierta una consulta pública para mejorar la regulación de las profesiones sanitarias. Haz click en el recuadro azul que se muestra a continuación para enviar un correo con el asunto y el texto ya redactados.</p>
+
+        <!-- MAILTO con asunto y cuerpo precargados -->
+        <a class="mailto-btn"
+           href="mailto:proyectosnormativos-dgorden@sanidad.gob.es?subject=Anteproyecto%20de%20ley%20de%20modificaci%C3%B3n%20de%20la%20Ley%2044%2F2003%20de%20ordenaci%C3%B3n%20de%20las%20profesiones%20sanitarias&body=Como%20ciudadana%2Fo%20con%20DNI%3A%20_%20_%20_%20_%20_%20_%20_%20_%20_%0A%0AAtendiendo%20a%20la%20consulta%20p%C3%BAblica%20del%20Ministerio%20de%20Sanidad%2C%20solicito%20que%20los%20profesionales%20fisioterapeutas%20dispongan%20de%3A%20Reconocimiento%20como%20profesional%20de%20primer%20contacto%2C%20autonom%C3%ADa%20cl%C3%ADnica%2C%20habilidades%20y%20capacitaci%C3%B3n%20para%20la%20prescripci%C3%B3n%20de%20pruebas%20diagn%C3%B3sticas%20y%20medicaci%C3%B3n%20dentro%20de%20sus%20competencias%20del%20aparato%20neuromusculoesquel%C3%A9tico%2C%20capacidad%20para%20que%20los%20ciudadanos%20tengamos%20acceso%20directo%20al%20profesional%20fisioterapeuta%2C%20un%20plan%20de%20formaci%C3%B3n%20especializada%20adecuada%20a%20las%20funciones%20que%20desarrollen.">
+          Enviar correo al Ministerio de Sanidad
+          <span>Se abrirá tu app de correo con el mensaje ya escrito — solo debes añadir tu DNI y enviar</span>
+        </a>
+
+        <div class="cta-details">
+          <p>&#128231; <strong>Destinatario:</strong> proyectosnormativos-dgorden@sanidad.gob.es</p>
+          <p>&#128203; <strong>Asunto:</strong> Anteproyecto de ley de modificación de la Ley 44/2003 de ordenación de las profesiones sanitarias</p>
+          <p>&#129351; Identifícate con tu DNI en el cuerpo del mensaje.</p>
+          <p>&#127760; Toda la información en <a href="https://www.sanidad.gob.es/normativa/consultas/home.htm" target="_blank">sanidad.gob.es/normativa/consultas</a></p>
+        </div>
+
+        <p style="font-size:14px; color:var(--gris); margin-bottom:14px;">Lee el argumentario completo con todos los datos y referencias:</p>
+        <button class="nav-btn" onclick="showPage('page-extendido')">Ver el documento completo →</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Respuesta a la Consulta Pública del Ministerio de Sanidad</p>
+    <p style="margin-top:6px;"><button onclick="showPage('page-extendido')">Referencias y documento ampliado</button></p>
+  </footer>
+
+</div><!-- /page-gancho -->
+
+
+<!-- ═══════════════════════════════════════
+     PÁGINA 2 · DOCUMENTO AMPLIADO
+═══════════════════════════════════════ -->
+<div id="page-extendido" class="page">
+
+  <nav class="top-nav">
+    <span class="top-nav-label">Documento Ampliado</span>
+    <button class="nav-btn back" onclick="showPage('page-gancho')">← Volver al resumen</button>
+  </nav>
+
+  <div style="background:var(--dorado); color:var(--marino); text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:8px 20px;">
+    Consulta Pública · Regulación de Profesiones Sanitarias
+  </div>
+
+  <!-- HERO -->
+  <div style="background:var(--crema); padding:52px 22px 38px; text-align:center; border-bottom:3px solid var(--dorado);">
+    <div class="wrap">
+      <h1 style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(24px,5vw,46px); color:var(--marino); font-weight:900; line-height:1.15; margin-bottom:16px;">Los fisioterapeutas participan</h1>
+      <p style="font-size:clamp(15px,2.5vw,19px); color:var(--gris); font-style:italic; max-width:640px; margin:0 auto;">Porque regular el pleno ejercicio de la fisioterapia beneficia a toda la ciudadanía, hoy y en el futuro</p>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="sec-wrap">
+    <div class="wrap">
+      <div class="toc">
+        <h2>Índice de contenidos</h2>
+        <ol>
+          <li><a href="#e-intro">Introducción</a></li>
+          <li><a href="#e-problema">El problema: una legislación que no acompaña a la realidad</a></li>
+          <li><a href="#e-quien">¿Quién ha tenido este mismo problema?</a></li>
+          <li><a href="#e-como">Cómo resolvieron el problema: las cuatro claves del cambio</a></li>
+          <li><a href="#e-beneficios">¿Qué ganaría España? Beneficios para el presente</a></li>
+          <li><a href="#e-futuro">Sentar las bases para el futuro</a></li>
+          <li><a href="#e-solicitud">Conclusión y solicitud</a></li>
+          <li><a href="#e-refs">Referencias</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- INTRO -->
+  <div class="sec-wrap alt" id="e-intro">
+    <div class="wrap">
+      <h2 class="sec">Introducción</h2>
+      <p class="bt">Este documento responde a la consulta pública abierta por el Ministerio de Sanidad en el marco de la mejora de la regulación de las profesiones sanitarias. Su objetivo es trasladar a la ciudadanía una realidad que afecta a millones de personas cada año: la legislación española limita severamente lo que los fisioterapeutas pueden hacer por ti, aunque la evidencia científica y la experiencia consolidada de otros países demuestran que ampliar y proteger sus competencias mejoraría la salud de los ciudadanos y la sostenibilidad del sistema sanitario.</p>
+    </div>
+  </div>
+  <hr class="divider-thin">
+
+  <!-- PROBLEMA -->
+  <div class="sec-wrap" id="e-problema">
+    <div class="wrap">
+      <h2 class="sec">1. El problema: una legislación que no acompaña a la realidad</h2>
+      <h3 class="subsec">1.1 Las enfermedades musculoesqueléticas, primera causa de consulta en atención primaria</h3>
+      <p class="bt">Las dolencias del aparato locomotor —lumbalgias, cervicalgias, tendinopatías, artrosis— son la segunda causa de discapacidad en España, según la Encuesta de Discapacidad, Autonomía Personal y Situaciones de Dependencia del Instituto Nacional de Estadística (INE, 2020). Aproximadamente uno de cada tres pacientes que acude a su médico de cabecera lo hace por un problema musculoesquelético (SEMERGEN, 2019). La fisioterapia es la intervención de primera elección para la mayoría de estos procesos según las principales guías de práctica clínica (NICE, 2021; Guía del SNS sobre Lumbalgia Inespecífica, 2019).</p>
+      <p class="bt">Sin embargo, en el sistema público español el paciente debe pasar primero por el médico de familia, quien emite la prescripción antes de que el fisioterapeuta pueda actuar. Este circuito añade semanas o meses de retraso innecesario y sobrecarga una atención primaria ya al límite.</p>
+      <div class="info-box">
+        <h4>Dato clave</h4>
+        <p>La lista de espera media para acceder al fisioterapeuta en el Sistema Nacional de Salud supera los 90 días en varias comunidades autónomas, y en algunas alcanza los 6 meses <em>(Defensor del Pueblo, 2022).</em></p>
+      </div>
+      <h3 class="subsec">1.2 Lo que los fisioterapeutas hacen sin protección legal adecuada</h3>
+      <p class="bt">El Consejo General de Colegios de Fisioterapeutas de España (CGCFE, 2023) estima que más de 51.000 fisioterapeutas colegiados ejercen en España. Un porcentaje significativo trabaja en el ámbito privado atendiendo directamente a la ciudadanía sin prescripción previa —algo habitual y aceptado en la práctica—, pero sin un marco regulatorio que defina sus competencias, sus límites ni los circuitos de comunicación con otros profesionales.</p>
+      <ul class="styled">
+        <li>Los fisioterapeutas españoles no pueden, con carácter general, solicitar pruebas diagnósticas complementarias aunque las necesiten para orientar el tratamiento. <em>(CGCFE, 2021)</em></li>
+        <li>No disponen de un circuito de derivación formal que les permita remitir directamente a otro especialista cuando detectan una patología que excede su ámbito. <em>(World Physiotherapy, 2019)</em></li>
+        <li>La prescripción de ejercicio terapéutico carece de respaldo normativo explícito en muchas comunidades autónomas. <em>(CGCFE, 2021)</em></li>
+        <li>No tienen reconocimiento formal para actuar en servicios de urgencias ni para prescribir medicación analgésica, competencias que en otros países llevan décadas reguladas. <em>(Department of Health England, 2013; Physiotherapy Research International, 2014)</em></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="divider-thin">
+
+  <!-- QUIÉN -->
+  <div class="sec-wrap alt" id="e-quien">
+    <div class="wrap">
+      <h2 class="sec">2. ¿Quién ha tenido este mismo problema?</h2>
+      <p class="bt">España no es el primero en enfrentarse a este reto. La mayoría de los sistemas sanitarios de Europa occidental, el Reino Unido y Australia atravesaron hace décadas una discusión idéntica. La respuesta, en casi todos ellos, fue ampliar progresivamente las competencias de los fisioterapeutas con formación específica y protocolos claros.</p>
+      <div class="tbl-wrap">
+        <table class="ctable">
+          <thead><tr><th>País</th><th>Medida adoptada</th><th>Resultado obtenido</th></tr></thead>
+          <tbody>
+            <tr><td>&#127468;&#127463;<br>Reino Unido</td><td>Rol «Emergency Department Physiotherapist» desde los años 90. First Contact Practitioner (FCP) en atención primaria desde 2016. Prescripción independiente de medicamentos desde 2013.</td><td>Reducción del 34 % en derivaciones innecesarias. Ahorro de más de 40 M£ anuales. Resolución autónoma del 70-80 % de casos musculoesqueléticos.<br><span class="rc">(NHS England, 2020; CSP, 2021; Department of Health England, 2013)</span></td></tr>
+            <tr><td>&#127475;&#127473;<br>Países Bajos</td><td>Acceso directo a fisioterapia sin prescripción desde 2006.</td><td>El 70 % de los pacientes acude directamente. Reducción de la carga médica y mayor satisfacción.<br><span class="rc">(Leemrijse et al., 2008)</span></td></tr>
+            <tr><td>&#127462;&#127482;<br>Australia</td><td>Fisioterapeutas como Extended Scope Practitioners (ESP) en urgencias. Proceso activo de aprobación de prescripción de medicamentos.</td><td>Reducción significativa de tiempos de espera en urgencias. Cobertura en zonas rurales con escasez de médicos.<br><span class="rc">(Stanhope et al., 2020; AIHW, 2020)</span></td></tr>
+            <tr><td>&#127467;&#127470;<br>Finlandia</td><td>Fisioterapeutas integrados en equipos de salud primaria con competencia de primera valoración desde los años 90.</td><td>Menores listas de espera y reducción del absentismo laboral por causas musculoesqueléticas.<br><span class="rc">(World Physiotherapy, 2019)</span></td></tr>
+            <tr><td>&#127480;&#127466;<br>Suecia</td><td>Prescripción de ejercicio terapéutico y solicitud de pruebas diagnósticas reguladas.</td><td>Integración efectiva en atención primaria con mejora de tiempos de resolución clínica.<br><span class="rc">(World Physiotherapy, 2019)</span></td></tr>
+            <tr><td>&#127470;&#127466;<br>Irlanda</td><td>Piloto de acceso directo en el Health Service Executive (HSE) desde 2018.</td><td>Reducción del 25 % en el tiempo hasta el inicio del tratamiento. Alta satisfacción de usuarios y profesionales.<br><span class="rc">(HSE, 2019)</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <hr class="divider-thin">
+
+  <!-- CÓMO -->
+  <div class="sec-wrap" id="e-como">
+    <div class="wrap">
+      <h2 class="sec">3. Cómo resolvieron el problema: las cuatro claves del cambio</h2>
+      <p class="bt">En todos los países que han ampliado las competencias de los fisioterapeutas, el avance se articuló en torno a cuatro ejes principales. No son propuestas teóricas: son modelos en funcionamiento con décadas de evidencia acumulada.</p>
+
+      <h3 class="subsec">3.1 Acceso directo a fisioterapia</h3>
+      <p class="bt">El acceso directo significa que el ciudadano puede acudir directamente a un fisioterapeuta sin prescripción médica previa. Esto no elimina la colaboración entre profesionales, sino que la hace más eficiente: el fisioterapeuta evalúa, trata y deriva al médico únicamente cuando detecta patología que requiere su intervención.</p>
+      <blockquote>«El acceso directo a fisioterapia es seguro, eficiente y reduce costes para el sistema sanitario.»<cite>— Chartered Society of Physiotherapy, 2021</cite></blockquote>
+      <p class="bt">En el Reino Unido, el programa First Contact Practitioner (FCP) demostró que los fisioterapeutas resuelven de forma autónoma entre el 70 % y el 80 % de los casos musculoesqueléticos que llegan a atención primaria, sin necesidad de derivación al médico (NHS England, 2020).</p>
+
+      <h3 class="subsec">3.2 Fisioterapeutas en urgencias</h3>
+      <p class="bt">Uno de los modelos más consolidados es el del fisioterapeuta de urgencias (Emergency Department Physiotherapist), implantado en el Reino Unido desde los años 90 y exportado a Australia, Irlanda y Canadá. El fisioterapeuta actúa como clínico de primer contacto para esguinces, lumbalgias agudas, cervicalgias traumáticas, tendinopatías agudas y traumatismos de partes blandas.</p>
+      <ul class="styled">
+        <li>Realización de la entrevista clínica y examen físico completo. <em>(Physiotherapy Research International, 2014)</em></li>
+        <li>Solicitud e interpretación de radiografías simples. <em>(Chartered Society of Physiotherapy, 2021)</em></li>
+        <li>Aplicación del tratamiento de fisioterapia y alta del paciente. <em>(AIHW, 2020)</em></li>
+        <li>Derivación al traumatólogo, cirujano o médico de urgencias cuando se detecta patología grave. <em>(Stanhope et al., 2020)</em></li>
+      </ul>
+      <div class="info-box blue">
+        <h4>Evidencia en urgencias</h4>
+        <p>Un estudio en el NHS demostró que los fisioterapeutas de urgencias resolvieron de forma autónoma el 85 % de los casos musculoesqueléticos semurgentes, con un tiempo medio de alta 40 minutos inferior al circuito médico convencional, sin incremento de eventos adversos. <em>(Physiotherapy Research International, 2014)</em></p>
+      </div>
+
+      <h3 class="subsec">3.3 Prescripción de medicamentos para el manejo del dolor</h3>
+      <p class="bt">En 2013, el Gobierno del Reino Unido aprobó que los fisioterapeutas con formación acreditada en prescripción independiente pudieran prescribir medicamentos dentro del ámbito de su práctica clínica, incluyendo analgésicos, antiinflamatorios no esteroideos (AINEs) y, en determinadas condiciones, opioides de baja potencia para el manejo del dolor musculoesquelético (Department of Health England, 2013).</p>
+      <p class="bt">Australia avanza en un proceso formal de aprobación análogo (AIHW, 2020). Los datos del NHS revelan un hallazgo contraintuitivo: los fisioterapeutas prescriptores frecuentemente <strong>reducen o sustituyen</strong> medicación previa innecesaria —opioides, AINEs y gabapentinoides a largo plazo— en lugar de añadir nueva medicación (Noblet et al., 2022).</p>
+      <div class="info-box green">
+        <h4>¿Por qué un fisioterapeuta puede prescribir con seguridad?</h4>
+        <p>La prescripción fisioterapéutica está estrictamente acotada al ámbito musculoesquelético y requiere formación acreditada adicional. El fisioterapeuta no sustituye al médico: actúa con la misma lógica que ya existe para enfermeras prescriptoras o podólogos prescriptores en el sistema español. <strong>La clave es la especialización, no la jerarquía.</strong></p>
+      </div>
+
+      <h3 class="subsec">3.4 Solicitud de pruebas diagnósticas y prescripción de ejercicio terapéutico</h3>
+      <p class="bt">En países como Reino Unido, Australia, Países Bajos, Finlandia y Suecia, los fisioterapeutas de práctica avanzada pueden solicitar directamente radiografías simples y otras pruebas de imagen cuando las necesitan, eliminando el circuito de consulta médica previa exclusivamente para validar una solicitud (World Physiotherapy, 2019; NHS England, 2020).</p>
+      <p class="bt">El ejercicio terapéutico prescrito y supervisado por fisioterapeutas es la intervención con mayor evidencia científica en el abordaje del dolor crónico musculoesquelético, la prevención de caídas, la rehabilitación cardíaca y el síndrome metabólico (NICE, 2021; APTA, 2020).</p>
+
+      <h3 class="subsec">3.5 La clave transversal: formación acreditada y protocolos claros</h3>
+      <p class="bt">En todos los países que han ampliado estas competencias, el éxito descansa en tres pilares comunes: formación específica acreditada para cada nuevo rol, protocolos de derivación bidireccional claros entre fisioterapeutas y médicos, y sistemas de auditoría y seguimiento de resultados. La seguridad del paciente no se ha visto comprometida en ninguno de los estudios revisados (Stanhope et al., 2020; Leemrijse et al., 2008; Noblet et al., 2022).</p>
+    </div>
+  </div>
+  <hr class="divider-thin">
+
+  <!-- BENEFICIOS -->
+  <div class="sec-wrap alt" id="e-beneficios">
+    <div class="wrap">
+      <h2 class="sec">4. ¿Qué ganaría España? Los beneficios para el presente</h2>
+      <h3 class="subsec">4.1 Reducción inmediata de listas de espera</h3>
+      <p class="bt">Si los fisioterapeutas pudieran ejercer como primer punto de contacto en atención primaria y en urgencias, se descargaría entre un 20 % y un 35 % de las consultas musculoesqueléticas que actualmente recaen sobre los médicos de familia (NICE, 2021; NHS England, 2020). En un sistema donde los médicos de atención primaria atienden una media de 35-40 pacientes diarios —cifra que multiplica la recomendada por la OMS— este alivio sería inmediato.</p>
+      <h3 class="subsec">4.2 Ahorro económico para el Sistema Nacional de Salud</h3>
+      <p class="bt">La OCDE (2023) sitúa el gasto sanitario español en el 10,7 % del PIB. El coste de una consulta de fisioterapia de primer contacto es entre un 30 % y un 50 % inferior al de una consulta médica especializada (Holdsworth et al., 2007).</p>
+      <div class="info-box">
+        <h4>Retorno de inversión en el NHS</h4>
+        <p>Por cada libra invertida en el programa FCP de fisioterapia, el sistema ahorraba entre 3,5 y 5 libras en consultas médicas y derivaciones evitadas (NHS England, 2020). Una proporción similar en el SNS español representaría un ahorro de varios cientos de millones de euros anuales.</p>
+      </div>
+      <h3 class="subsec">4.3 Mejora de resultados clínicos y reducción del consumo de fármacos</h3>
+      <p class="bt">La intervención temprana reduce el riesgo de cronificación del dolor, el consumo de analgésicos y antiinflamatorios y el absentismo laboral. El coste social del dolor crónico musculoesquelético en España se estima en más de 11.000 millones de euros anuales (Ministerio de Sanidad, 2022).</p>
+      <h3 class="subsec">4.4 Beneficio directo para la población activa (20-60 años)</h3>
+      <p class="bt">La población entre 20 y 60 años soporta la mayor carga laboral y padece las patologías derivadas del sedentarismo, el trabajo de oficina y el sobreentrenamiento. Actualmente muchos recurren a la fisioterapia privada —pagando de su bolsillo— porque el sistema público les impone tiempos que no pueden permitirse.</p>
+      <h3 class="subsec">4.5 Mayor equidad territorial</h3>
+      <p class="bt">En zonas rurales o con escasez de médicos de familia, el fisioterapeuta —presente en muchos municipios pequeños a través de centros de salud o consultorios locales— podría convertirse en el primer punto de atención para problemas musculoesqueléticos (World Physiotherapy, 2019; Ministerio de Sanidad, 2022).</p>
+    </div>
+  </div>
+  <hr class="divider-thin">
+
+  <!-- FUTURO -->
+  <div class="sec-wrap" id="e-futuro">
+    <div class="wrap">
+      <h2 class="sec">5. Sentar las bases para el futuro: el reto demográfico de España</h2>
+      <p class="bt">Resolver el problema de hoy es urgente. Pero hay una razón aún más poderosa para actuar ahora: las decisiones regulatorias que se tomen en los próximos años determinarán si el sistema sanitario español podrá sostenerse ante el mayor reto demográfico de su historia.</p>
+      <h3 class="subsec">5.1 La España de 2050</h3>
+      <div class="future-grid" style="margin-top:20px;">
+        <div class="future-card fc1"><span class="big">1 de cada 3</span><p>españoles tendrá más de 65 años en 2050. La generación que hoy tiene 30-45 años.</p><p class="rf">(INE, Proyecciones de Población 2022-2072)</p></div>
+        <div class="future-card fc2"><span class="big">×2</span><p>se multiplicará la tasa de dependencia demográfica, de 31 % en 2022 al 53,7 % en 2050.</p><p class="rf">(FEDEA / INE, 2021)</p></div>
+        <div class="future-card fc3"><span class="big">51.000+</span><p>fisioterapeutas colegiados en España hoy, con formación universitaria de grado, máster y doctorado.</p><p class="rf">(CGCFE, 2023)</p></div>
+      </div>
+      <p class="bt">La generación que tiene hoy entre 20 y 60 años es exactamente la que estará en el centro de ese escenario: serán los mayores de 65 años de 2050, o la población activa que deba financiar el sistema que los atienda. En ambos casos, les interesa directamente que hoy se tomen las decisiones correctas.</p>
+      <h3 class="subsec">5.2 Por qué la fisioterapia es clave para la sostenibilidad futura</h3>
+      <p class="bt">Las patologías musculoesqueléticas, las caídas en personas mayores, el deterioro funcional y las enfermedades crónicas asociadas al sedentarismo son las principales causas de discapacidad y dependencia en la vejez, y por tanto los principales motores del gasto sanitario futuro (Ministerio de Sanidad, 2022; OCDE, 2023).</p>
+      <p class="bt">La evidencia científica es concluyente: la fisioterapia preventiva y de rehabilitación, aplicada de forma temprana y con pleno reconocimiento competencial, es la intervención con mayor coste-efectividad para retrasar la dependencia y mantener la autonomía funcional de la población (NICE, 2021; World Physiotherapy, 2019).</p>
+      <h3 class="subsec">5.3 Una inversión estructural, no un gasto</h3>
+      <p class="bt">Integrar plenamente a los fisioterapeutas en el sistema sanitario —con competencias en urgencias, prescripción medicamentosa, acceso directo y solicitud de pruebas— no es un cambio cosmético. Es una decisión de arquitectura del sistema de salud con impacto directo en la sostenibilidad a largo plazo.</p>
+      <blockquote>«Invertir en la ampliación de competencias de los fisioterapeutas hoy es la apuesta más coste-efectiva para garantizar la sostenibilidad del sistema sanitario ante el envejecimiento poblacional.»<cite>— World Physiotherapy, 2019</cite></blockquote>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- SOLICITUD -->
+  <div class="sec-wrap alt" id="e-solicitud">
+    <div class="wrap">
+      <h2 class="sec">6. Conclusión y solicitud</h2>
+      <p class="bt">Los datos son claros: la fisioterapia con plenas competencias es segura, coste-efectiva, mejora los resultados en salud y prepara el sistema para los retos del futuro. España cuenta con más de 51.000 profesionales cualificados —con formación de grado, máster y doctorado— preparados para asumir estas responsabilidades bajo el marco legal y los protocolos adecuados.</p>
+      <p class="bt"><strong>Pedimos al Ministerio de Sanidad</strong> que la reforma incluya, de forma explícita:</p>
+      <ol class="petition">
+        <li>El reconocimiento del fisioterapeuta como profesional de primer contacto en el Sistema Nacional de Salud para problemas musculoesqueléticos, tanto en atención primaria como en servicios de urgencias.</li>
+        <li>La regulación del acceso directo a fisioterapia sin prescripción médica previa, con protocolos claros de derivación bidireccional y auditoría de resultados.</li>
+        <li>El marco legal para la prescripción de medicamentos analgésicos y antiinflamatorios en el ámbito musculoesquelético, condicionada a formación acreditada específica, siguiendo el modelo del Department of Health de Inglaterra (2013).</li>
+        <li>El reconocimiento de la prescripción de ejercicio terapéutico y la facultad de solicitar pruebas diagnósticas básicas como competencias propias del fisioterapeuta.</li>
+        <li>Un plan de integración progresiva en atención primaria y urgencias, con financiación suficiente, formación acreditada y evaluación continua de resultados, tomando como referencia los modelos FCP del NHS y los programas de fisioterapia de práctica avanzada en Australia.</li>
+      </ol>
+      <div class="highlight" style="margin-top:24px;">
+        <strong>¿Cómo participar?</strong><br><br>
+        <a href="mailto:proyectosnormativos-dgorden@sanidad.gob.es?subject=Anteproyecto%20de%20ley%20de%20modificaci%C3%B3n%20de%20la%20Ley%2044%2F2003%20de%20ordenaci%C3%B3n%20de%20las%20profesiones%20sanitarias&body=Como%20ciudadana%2Fo%20con%20DNI%3A%20_%20_%20_%20_%20_%20_%20_%20_%20_%0A%0AAtendiendo%20a%20la%20consulta%20p%C3%BAblica%20del%20Ministerio%20de%20Sanidad%2C%20solicito%20que%20los%20profesionales%20fisioterapeutas%20dispongan%20de%3A%20Reconocimiento%20como%20profesional%20de%20primer%20contacto%2C%20autonom%C3%ADa%20cl%C3%ADnica%2C%20habilidades%20y%20capacitaci%C3%B3n%20para%20la%20prescripci%C3%B3n%20de%20pruebas%20diagn%C3%B3sticas%20y%20medicaci%C3%B3n%20dentro%20de%20sus%20competencias%20del%20aparato%20neuromusculoesquel%C3%A9tico%2C%20capacidad%20para%20que%20los%20ciudadanos%20tengamos%20acceso%20directo%20al%20profesional%20fisioterapeuta%2C%20un%20plan%20de%20formaci%C3%B3n%20especializada%20adecuada%20a%20las%20funciones%20que%20desarrollen." style="color:var(--dorado-light); font-weight:700;">&#128231; Enviar correo al Ministerio</a> — el asunto y el cuerpo ya vienen escritos; solo añade tu DNI.<br><br>
+        &#127760; Toda la información en <a href="https://www.sanidad.gob.es/normativa/consultas/home.htm" target="_blank" style="color:var(--dorado-light)">sanidad.gob.es/normativa/consultas</a>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- REFERENCIAS -->
+  <div class="sec-wrap" id="e-refs">
+    <div class="wrap">
+      <h2 class="sec">Referencias</h2>
+      <div class="refs">
+        <p><strong>American Physical Therapy Association. (2020).</strong> Physical therapist practice and the movement system. APTA.</p>
+        <p><strong>Australian Institute of Health and Welfare. (2020).</strong> Emergency department care 2019–20: Australian hospital statistics. AIHW. https://www.aihw.gov.au</p>
+        <p><strong>Chartered Society of Physiotherapy. (2021).</strong> First contact physiotherapy: A guide for commissioners and providers. CSP. https://www.csp.org.uk/publications/first-contact-physiotherapy</p>
+        <p><strong>Consejo General de Colegios de Fisioterapeutas de España. (2021).</strong> Competencias del fisioterapeuta en el sistema sanitario español. CGCFE. https://www.consejo-fisioterapia.org</p>
+        <p><strong>Consejo General de Colegios de Fisioterapeutas de España. (2023).</strong> Datos estadísticos de la profesión fisioterapeuta en España 2023. CGCFE.</p>
+        <p><strong>Defensor del Pueblo. (2022).</strong> Informe anual 2022: Listas de espera sanitarias en el Sistema Nacional de Salud. Defensor del Pueblo de España.</p>
+        <p><strong>Department of Health England. (2013).</strong> Supplementary prescribing by nurses, pharmacists, chiropodists/podiatrists, physiotherapists and radiographers within the NHS in England. Department of Health. https://assets.publishing.service.gov.uk</p>
+        <p><strong>Fundación de Estudios de Economía Aplicada / Instituto Nacional de Estadística. (2021).</strong> Proyecciones demográficas 2020–2070. FEDEA.</p>
+        <p><strong>Grupo de trabajo de la Guía de Práctica Clínica sobre Lumbalgia Inespecífica del SNS. (2019).</strong> Guía de práctica clínica sobre lumbalgia inespecífica. Ministerio de Sanidad, Consumo y Bienestar Social.</p>
+        <p><strong>Health Service Executive. (2019).</strong> Pilot programme: Direct access physiotherapy in primary care. HSE Ireland.</p>
+        <p><strong>Holdsworth, L. K., Webster, V. S., & McFadyen, A. K. (2007).</strong> What are the costs to NHS Scotland of self-referral to physiotherapy? <em>Physiotherapy, 93</em>(1), 3–11. https://doi.org/10.1016/j.physio.2006.06.007</p>
+        <p><strong>Instituto Nacional de Estadística. (2020).</strong> Encuesta de Discapacidad, Autonomía Personal y Situaciones de Dependencia (EDAD 2020). INE. https://www.ine.es</p>
+        <p><strong>Instituto Nacional de Estadística. (2022).</strong> Proyecciones de Población de España 2022–2072. INE. https://www.ine.es/prensa/pp_2022_2072.pdf</p>
+        <p><strong>Leemrijse, C. J., Swinkels, I. C., & Veenhof, C. (2008).</strong> Direct access to physical therapy in the Netherlands. <em>Physical Therapy, 88</em>(8), 936–946. https://doi.org/10.2522/ptj.20070350</p>
+        <p><strong>Ministerio de Sanidad. (2022).</strong> Informe anual del Sistema Nacional de Salud 2022. https://www.sanidad.gob.es</p>
+        <p><strong>National Institute for Health and Care Excellence. (2021).</strong> Musculoskeletal conditions: Evidence review. NICE. https://www.nice.org.uk</p>
+        <p><strong>NHS England. (2020).</strong> First contact physiotherapy: Evidence base and implementation guide. https://www.england.nhs.uk/ahp/med-tech-pharm-non-med-resource-hub/first-contact-practitioners</p>
+        <p><strong>Noblet, T., Marriott, J., Graham-Clarke, E., & Shirley, D. (2022).</strong> Barriers and facilitators to non-medical prescribing in physiotherapy. <em>Musculoskeletal Science and Practice, 57</em>, 102488. https://doi.org/10.1016/j.msksp.2021.102488</p>
+        <p><strong>Organisation for Economic Co-operation and Development. (2023).</strong> Health at a glance 2023: OECD indicators. https://doi.org/10.1787/7a7afb35-en</p>
+        <p><strong>Physiotherapy Research International. (2014).</strong> Emergency department physiotherapy: A systematic review. <em>Physiotherapy Research International, 19</em>(4), 201–210. https://doi.org/10.1002/pri.1578</p>
+        <p><strong>Sociedad Española de Médicos de Atención Primaria. (2019).</strong> Patología musculoesquelética en atención primaria: Guía de práctica clínica SEMERGEN.</p>
+        <p><strong>Stanhope, J., Grimmer-Somers, K., Milanese, S., Kumar, S., & Morris, J. (2020).</strong> Extended scope physiotherapy roles for orthopedic outpatients. <em>Journal of Multidisciplinary Healthcare, 13</em>, 1263–1278. https://doi.org/10.2147/JMDH.S251123</p>
+        <p><strong>World Physiotherapy. (2019).</strong> Policy statement: Description of physical therapy / physiotherapy. https://world.physio/policy/ps-descriptionPT</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Respuesta a la Consulta Pública del Ministerio de Sanidad</p>
+    <p style="margin-top:8px;"><button onclick="showPage('page-gancho')">← Volver al resumen</button></p>
+  </footer>
+
+</div><!-- /page-extendido -->
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisioportal | Comunidad de Fisioterapia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hidden-section { display: none; }
+        .active-link { background-color: #f1f5f9; color: #0f172a; }
+        .card-friendly { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-friendly:hover { transform: translateY(-2px); shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+    </style>
+</head>
+<body class="bg-[#F9FBFC] text-slate-800">
+
+    <nav class="sticky top-0 bg-white/80 backdrop-blur-md border-b border-slate-100 z-50">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold">F</div>
+                <span class="text-xl font-extrabold tracking-tight text-slate-900">FISIOPORTAL</span>
+            </div>
+            
+            <div class="flex bg-slate-100 p-1 rounded-2xl">
+                <button onclick="showSection('noticias')" id="link-noticias" class="nav-link active-link px-4 py-2 text-sm font-bold rounded-xl transition-all">Radar Fisio</button>
+                <button onclick="showSection('empleo')" id="link-empleo" class="nav-link px-4 py-2 text-sm font-bold text-slate-500 rounded-xl transition-all hover:text-slate-900">Empleo</button>
+                <button onclick="showSection('proyecto')" id="link-proyecto" class="nav-link px-4 py-2 text-sm font-bold text-slate-500 rounded-xl transition-all hover:text-slate-900">Proyecto</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+       <div id="section-noticias" class="content-section">
+         <div class="mb-10 flex justify-between items-end">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Radar Fisio</h2>
+                    <p class="text-slate-500 mt-2">La actualidad que impacta en tu día a día.</p>
+                </div>
+                <div class="hidden md:block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                    Actualizado hoy
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <article class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm card-friendly cursor-pointer flex flex-col">
+                    <div class="mb-4">
+                        <span class="bg-red-50 text-red-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Alerta Legal</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight flex-1">
+                        Cambio en la Ley de Centros Sanitarios: Junio 2026.
+                    </h3>
+                    <p class="text-slate-500 mt-4 text-sm leading-relaxed">
+                        Nuevos requisitos de accesibilidad para clínicas de autónomos. Analizamos qué inspecciones se esperan.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-slate-50 flex items-center text-teal-600 text-sm font-bold">
+                        Leer análisis <span class="ml-2">→</span>
+                    </div>
+                </article>
+
+                <article class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm card-friendly cursor-pointer flex flex-col">
+                    <div class="mb-4">
+                        <span class="bg-emerald-50 text-emerald-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Evidencia</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight flex-1">
+                        Tendinopatía aquílea: Carga pesada vs. Reposo.
+                    </h3>
+                    <p class="text-slate-500 mt-4 text-sm leading-relaxed">
+                        ¿Sigue siendo el protocolo de carga pesada el más eficiente? Revisamos el último meta-análisis del BJSM.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-slate-50 flex items-center text-teal-600 text-sm font-bold">
+                        Ver protocolos <span class="ml-2">→</span>
+                    </div>
+                </article>
+
+                <article class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm card-friendly cursor-pointer flex flex-col">
+                    <div class="mb-4">
+                        <span class="bg-purple-50 text-purple-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Tecnología</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight flex-1">
+                        Automatiza tus informes de alta con IA.
+                    </h3>
+                    <p class="text-slate-500 mt-4 text-sm leading-relaxed">
+                        Guía práctica para ahorrar 30 minutos de burocracia diaria sin riesgos de protección de datos.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-slate-50 flex items-center text-teal-600 text-sm font-bold">
+                        Ver guía <span class="ml-2">→</span>
+                    </div>
+                </article>
+
+                <article class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm card-friendly cursor-pointer flex flex-col">
+                    <div class="mb-4">
+                        <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Laboral</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight flex-1">
+                        Convenio de Clínicas Privadas: Tablas 2026.
+                    </h3>
+                    <p class="text-slate-500 mt-4 text-sm leading-relaxed">
+                        Publicada la actualización salarial. Revisa si tu nómina refleja los nuevos complementos.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-slate-50 flex items-center text-teal-600 text-sm font-bold">
+                        Descargar tablas <span class="ml-2">→</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <div id="section-empleo" class="content-section hidden-section">
+            <div class="bg-teal-50 border border-teal-100 p-10 rounded-[2.5rem] text-center">
+                <h3 class="text-2xl font-bold text-teal-900">Buscamos ofertas dignas</h3>
+                <p class="text-teal-800/70 mt-4 max-w-lg mx-auto">Estamos validando convenios para asegurar que cada oferta aquí sea respetuosa. Próximamente.</p>
+            </div>
+        </div>
+
+   <div id="section-proyecto" class="content-section hidden-section pt-10">
+            
+            <div class="mb-16 border-l-4 border-teal-600 pl-6">
+                <h3 class="text-4xl font-black text-slate-900 tracking-tight">
+                    Los pilares de Fisioportal
+                </h3>
+                <p class="text-slate-600 mt-2 text-lg italic font-medium">Todo lo que ves aquí es de acceso abierto.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                
+                <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm card-friendly">
+                    <div class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 text-2xl">⚖️</div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4">Tendencia Horizontal</h4>
+                    <p class="text-slate-700 leading-relaxed text-sm">
+                        No creemos en jerarquías estancas. En Fisioportal, cada miembro es una pieza clave y sus propuestas tienen un valor real para la comunidad. Construimos desde la base, donde tu voz pesa lo mismo que la de cualquier otro.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm card-friendly">
+                    <div class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 text-2xl">💎</div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4">Transparencia Ética</h4>
+                    <p class="text-slate-700 leading-relaxed text-sm">
+                        Somos independientes: somos transparentes ante cualquier conflicto de interés. Para ser sostenibles, solo aceptaremos publicidad de marcas éticas que cumplan rigurosamente lo que anuncian y estén alineadas con nuestros principios.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm card-friendly">
+                    <div class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 text-2xl">🔓</div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4">Acceso a la información</h4>
+                    <p class="text-slate-700 leading-relaxed text-sm">
+                        El conocimiento no es un privilegio. Facilitamos el acceso a la evidencia científica y a las normativas que nos afectan, bajándolas al terreno práctico para que dejen de ser barreras y se conviertan en herramientas de poder para ti.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-2 bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200">
+                    <div class="flex items-start gap-6">
+                        <div class="hidden md:flex w-14 h-14 bg-white rounded-2xl items-center justify-center text-3xl shadow-sm">🛠️</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-4">Utilidad Real</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Algo hecho por fisios para fisios. Nuestro objetivo no es teorizar, sino mejorar tu día a día. Creamos recursos para que tu jornada sea más eficiente, tu práctica más segura y tu tiempo más productivo. Si no es útil en tu consulta, no está aquí.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 p-8 rounded-[2.5rem] text-white flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 bg-teal-600 rounded-xl flex items-center justify-center mb-6 text-xl">🌐</div>
+                        <h4 class="text-xl font-bold mb-4 text-teal-400">Red (Nodo)</h4>
+                        <p class="opacity-90 leading-relaxed mb-6 text-sm">
+                            No somos una institución rígida, somos un nodo de conexión. Unimos a profesionales de todas las comunidades para compartir recursos y fortalecer la profesión.
+                        </p>
+                    </div>
+                    <a href="#" class="inline-block bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold py-4 px-6 rounded-2xl transition-all text-sm text-center">
+                        Si esto te resuena: ¡Únete!
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="p-10 text-center bg-white border border-slate-100 rounded-[2.5rem]">
+                <p class="text-2xl font-bold text-slate-800 leading-tight">
+                    "Por la fisioterapia de ayer, por la de hoy y sobre todo por la de mañana."
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-12 text-center text-slate-400 text-xs font-medium uppercase tracking-widest">
+        Fisioportal © 2026 · Hecho con ❤️ para fisioterapeutas
+    </footer>
+
+    <script>
+   // --- AQUÍ ACTUALIZAS TUS NOTICIAS ---
+        const noticias = [
+            {
+                tag: "Consulta Pública",
+                color: "bg-red-50 text-red-600",
+                titulo: "La importancia de la fisioterapia en la actualización de la regulación de las profesiones sanitarias",
+                desc: "Analizamos por qué el nuevo marco legal del Ministerio de Sanidad es una oportunidad histórica para el sector y cómo tu participación puede cambiarlo todo.",
+                link: "NOTICIA LEY.html",
+                imagen: "nombre-de-tu-foto.jpg" // <--- CAMBIA ESTO por el nombre de tu foto
+            }
+        ];
+
+        function renderNews() {
+            const grid = document.getElementById('news-grid');
+            if (!grid) return;
+            
+            grid.innerHTML = noticias.map(n => `
+                <article onclick="window.location.href='${n.link}'" class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm card-friendly flex flex-col overflow-hidden">
+                    <img src="${n.imagen}" alt="Noticia" class="w-full h-80 object-cover">
+                    <div class="p-8">
+                        <div class="mb-4"><span class="${n.color} text-[10px] font-bold px-3 py-1 rounded-full uppercase">${n.tag}</span></div>
+                        <h3 class="text-2xl font-bold text-slate-900 leading-tight mb-4">${n.titulo}</h3>
+                        <p class="text-slate-600 leading-relaxed">${n.desc}</p>
+                        <div class="mt-8 pt-6 border-t border-slate-50 text-teal-600 font-bold">
+                            Leer análisis y participar →
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden-section'));
+            document.getElementById('section-' + sectionId).classList.remove('hidden-section');
+            
+            document.querySelectorAll('.nav-link').forEach(l => {
+                l.classList.remove('active-link');
+                l.classList.add('text-slate-500');
+            });
+            const btn = document.getElementById('link-' + sectionId);
+            btn.classList.add('active-link');
+            btn.classList.remove('text-slate-500');
+        }
+
+        // Arrancamos el motor
+        renderNews();
+    </script>
+</body>
+</html>

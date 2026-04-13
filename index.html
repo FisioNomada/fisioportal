@@ -126,49 +126,17 @@
     </footer>
 
     <script>
- // --- CONFIGURACIÓN DE TU NOTICIA ÚNICA ---
+// --- CONFIGURACIÓN DE TU NOTICIA ÚNICA ---
         const noticias = [
             {
                 tag: "Consulta Pública",
                 color: "bg-red-50 text-red-600",
                 titulo: "La importancia de la fisioterapia en la actualización de la regulación de las profesiones sanitarias",
                 desc: "Analizamos por qué el nuevo marco legal del Ministerio de Sanidad es una oportunidad histórica para el sector y cómo tu participación puede cambiarlo todo.",
-                link: "NOTICIA LEY.html", // Enlace a tu noticia detallada
-                imagen: "NOTICIA 1.png.jpg" // Nombre exacto de tu imagen facilitada
+                link: "noticialey.html", // Nombre simplificado
+                imagen: "noticia1.jpg"    // Nombre simplificado
             }
         ];
-
-        function renderNews() {
-            const grid = document.getElementById('news-grid');
-            if (!grid) return;
-            
-            grid.innerHTML = noticias.map(n => `
-                <article onclick="window.location.href='${n.link}'" class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm card-friendly flex flex-col overflow-hidden cursor-pointer">
-                    <img src="${n.imagen}" alt="Noticia Sanidad" class="w-full h-auto object-contain bg-gray-50">
-                    <div class="p-8">
-                        <div class="mb-4"><span class="${n.color} text-[10px] font-bold px-3 py-1 rounded-full uppercase">${n.tag}</span></div>
-                        <h3 class="text-2xl font-bold text-slate-900 leading-tight mb-4">${n.titulo}</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">${n.desc}</p>
-                        <div class="mt-8 pt-6 border-t border-slate-50 text-teal-600 font-bold text-sm">
-                            Leer análisis y participar en la consulta →
-                        </div>
-                    </div>
-                </article>
-            `).join('');
-        }
-
-        function showSection(sectionId) {
-            document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden-section'));
-            document.getElementById('section-' + sectionId).classList.remove('hidden-section');
-            
-            document.querySelectorAll('.nav-link').forEach(l => {
-                l.classList.remove('active-link');
-                l.classList.add('text-slate-500');
-            });
-            const btn = document.getElementById('link-' + sectionId);
-            btn.classList.add('active-link');
-            btn.classList.remove('text-slate-500');
-        }
 
         // Ejecutar al cargar
         renderNews();

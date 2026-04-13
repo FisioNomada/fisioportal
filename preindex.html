@@ -33,82 +33,16 @@
 
     <main class="max-w-5xl mx-auto px-6 py-12">
 
-       <div id="section-noticias" class="content-section">
-         <div class="mb-10 flex justify-between items-end">
-                <div>
-                    <h2 class="text-3xl font-extrabold text-slate-900">Radar Fisio</h2>
-                    <p class="text-slate-500 mt-2">La actualidad que impacta en tu día a día.</p>
-                </div>
-                <div class="hidden md:block text-xs font-bold text-slate-400 uppercase tracking-widest">
-                    Actualizado hoy
-                </div>
+<div id="section-noticias" class="content-section">
+            <div class="mb-10 text-center">
+                <h2 class="text-3xl font-extrabold text-slate-900">Radar Fisio</h2>
+                <p class="text-slate-500 mt-2">La actualidad que impacta en nuestra profesión.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <article class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm card-friendly cursor-pointer flex flex-col">
-                    <div class="mb-4">
-                        <span class="bg-red-50 text-red-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Alerta Legal</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 leading-tight flex-1">
-                        Cambio en la Ley de Centros Sanitarios: Junio 2026.
-                    </h3>
-                    <p class="text-slate-500 mt-4 text-sm leading-relaxed">
-                        Nuevos requisitos de accesibilidad para clínicas de autónomos. Analizamos qué inspecciones se esperan.
-                    </p>
-                    <div class="mt-6 pt-4 border-t border-slate-50 flex items-center text-teal-600 text-sm font-bold">
-                        Leer análisis <span class="ml-2">→</span>
-                    </div>
-                </article>
-
-                <article class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm card-friendly cursor-pointer flex flex-col">
-                    <div class="mb-4">
-                        <span class="bg-emerald-50 text-emerald-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Evidencia</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 leading-tight flex-1">
-                        Tendinopatía aquílea: Carga pesada vs. Reposo.
-                    </h3>
-                    <p class="text-slate-500 mt-4 text-sm leading-relaxed">
-                        ¿Sigue siendo el protocolo de carga pesada el más eficiente? Revisamos el último meta-análisis del BJSM.
-                    </p>
-                    <div class="mt-6 pt-4 border-t border-slate-50 flex items-center text-teal-600 text-sm font-bold">
-                        Ver protocolos <span class="ml-2">→</span>
-                    </div>
-                </article>
-
-                <article class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm card-friendly cursor-pointer flex flex-col">
-                    <div class="mb-4">
-                        <span class="bg-purple-50 text-purple-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Tecnología</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 leading-tight flex-1">
-                        Automatiza tus informes de alta con IA.
-                    </h3>
-                    <p class="text-slate-500 mt-4 text-sm leading-relaxed">
-                        Guía práctica para ahorrar 30 minutos de burocracia diaria sin riesgos de protección de datos.
-                    </p>
-                    <div class="mt-6 pt-4 border-t border-slate-50 flex items-center text-teal-600 text-sm font-bold">
-                        Ver guía <span class="ml-2">→</span>
-                    </div>
-                </article>
-
-                <article class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm card-friendly cursor-pointer flex flex-col">
-                    <div class="mb-4">
-                        <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Laboral</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 leading-tight flex-1">
-                        Convenio de Clínicas Privadas: Tablas 2026.
-                    </h3>
-                    <p class="text-slate-500 mt-4 text-sm leading-relaxed">
-                        Publicada la actualización salarial. Revisa si tu nómina refleja los nuevos complementos.
-                    </p>
-                    <div class="mt-6 pt-4 border-t border-slate-50 flex items-center text-teal-600 text-sm font-bold">
-                        Descargar tablas <span class="ml-2">→</span>
-                    </div>
-                </article>
-
-            </div>
+            <div id="news-grid" class="max-w-2xl mx-auto">
+                </div>
         </div>
-
+        
         <div id="section-empleo" class="content-section hidden-section">
             <div class="bg-teal-50 border border-teal-100 p-10 rounded-[2.5rem] text-center">
                 <h3 class="text-2xl font-bold text-teal-900">Buscamos ofertas dignas</h3>
@@ -117,8 +51,7 @@
         </div>
 
    <div id="section-proyecto" class="content-section hidden-section pt-10">
-            
-            <div class="mb-16 border-l-4 border-teal-600 pl-6">
+       <div class="mb-16 border-l-4 border-teal-600 pl-6">
                 <h3 class="text-4xl font-black text-slate-900 tracking-tight">
                     Los pilares de Fisioportal
                 </h3>
@@ -192,48 +125,73 @@
     </footer>
 
     <script>
-   // --- AQUÍ ACTUALIZAS TUS NOTICIAS ---
+// --- CONFIGURACIÓN DE TU NOTICIA DESTACADA ---
         const noticias = [
             {
-                tag: "Consulta Pública",
-                color: "bg-red-50 text-red-600",
-                titulo: "La importancia de la fisioterapia en la actualización de la regulación de las profesiones sanitarias",
+                tag: "Oportunidad Histórica",
+                color: "bg-teal-50 text-teal-600",
+                titulo: "La oportunidad de los fisioterapeutas en la regulación de las profesiones sanitarias",
                 desc: "Analizamos por qué el nuevo marco legal del Ministerio de Sanidad es una oportunidad histórica para el sector y cómo tu participación puede cambiarlo todo.",
-                link: "NOTICIA LEY.html",
-                imagen: "nombre-de-tu-foto.jpg" // <--- CAMBIA ESTO por el nombre de tu foto
+                link: "noticialey.html",
+                imagen: "noticia1.jpg"
             }
         ];
 
-        function renderNews() {
+  function renderNews() {
             const grid = document.getElementById('news-grid');
             if (!grid) return;
             
+            // Mantenemos el ancho de la tarjeta contenido (max-w-lg) para que sea elegante
+            grid.className = "max-w-lg mx-auto"; 
+            
             grid.innerHTML = noticias.map(n => `
-                <article onclick="window.location.href='${n.link}'" class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm card-friendly flex flex-col overflow-hidden">
-                    <img src="${n.imagen}" alt="Noticia" class="w-full h-80 object-cover">
-                    <div class="p-8">
-                        <div class="mb-4"><span class="${n.color} text-[10px] font-bold px-3 py-1 rounded-full uppercase">${n.tag}</span></div>
-                        <h3 class="text-2xl font-bold text-slate-900 leading-tight mb-4">${n.titulo}</h3>
-                        <p class="text-slate-600 leading-relaxed">${n.desc}</p>
-                        <div class="mt-8 pt-6 border-t border-slate-50 text-teal-600 font-bold">
-                            Leer análisis y participar →
+                <article onclick="window.location.href='${n.link}'" class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer">
+                    
+                    <div class="w-full h-72 md:h-96 overflow-hidden bg-white flex items-center justify-center">
+                        <img src="${n.imagen}" alt="Noticia Sanidad" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-8 pt-4">
+                        <div class="mb-4">
+                            <span class="${n.color} text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                                ${n.tag}
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-4 group-hover:text-teal-600 transition-colors">
+                            ${n.titulo}
+                        </h3>
+                        
+                        <p class="text-slate-500 leading-relaxed text-sm mb-8">
+                            ${n.desc}
+                        </p>
+                        
+                        <div class="flex items-center text-teal-600 font-bold text-sm">
+                            <span>Leer análisis y participar</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
                         </div>
                     </div>
                 </article>
             `).join('');
         }
-
-        function showSection(sectionId) {
+function showSection(sectionId) {
+            // Oculta todas las secciones
             document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden-section'));
+            // Muestra la sección seleccionada
             document.getElementById('section-' + sectionId).classList.remove('hidden-section');
             
+            // Actualiza el estilo de los botones del menú
             document.querySelectorAll('.nav-link').forEach(l => {
                 l.classList.remove('active-link');
                 l.classList.add('text-slate-500');
             });
             const btn = document.getElementById('link-' + sectionId);
-            btn.classList.add('active-link');
-            btn.classList.remove('text-slate-500');
+            if (btn) {
+                btn.classList.add('active-link');
+                btn.classList.remove('text-slate-500');
+            }
         }
 
         // Arrancamos el motor

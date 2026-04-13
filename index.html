@@ -126,39 +126,55 @@
     </footer>
 
     <script>
-// --- CONFIGURACIÓN DE TU NOTICIA ÚNICA ---
+// --- CONFIGURACIÓN DE TU NOTICIA DESTACADA ---
         const noticias = [
             {
-                tag: "Consulta Pública",
-                color: "bg-red-50 text-red-600",
-                titulo: "La importancia de la fisioterapia en la actualización de la regulación de las profesiones sanitarias",
+                tag: "Oportunidad Histórica",
+                color: "bg-teal-50 text-teal-600",
+                titulo: "La oportunidad de los fisioterapeutas en la regulación de las profesiones sanitarias",
                 desc: "Analizamos por qué el nuevo marco legal del Ministerio de Sanidad es una oportunidad histórica para el sector y cómo tu participación puede cambiarlo todo.",
-                link: "noticialey.html", // Nombre simplificado
-                imagen: "noticia1.jpg"    // Nombre simplificado
+                link: "noticialey.html",
+                imagen: "noticia1.jpg"
             }
         ];
 
-        // FUNCIÓN PARA PINTAR LA NOTICIA EN PANTALLA
         function renderNews() {
             const grid = document.getElementById('news-grid');
             if (!grid) return;
             
             grid.innerHTML = noticias.map(n => `
-                <article onclick="window.location.href='${n.link}'" class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm card-friendly flex flex-col overflow-hidden cursor-pointer">
-                    <img src="${n.imagen}" alt="Noticia Sanidad" class="w-full h-auto object-contain bg-gray-50">
-                    <div class="p-8">
-                        <div class="mb-4"><span class="${n.color} text-[10px] font-bold px-3 py-1 rounded-full uppercase">${n.tag}</span></div>
-                        <h3 class="text-2xl font-bold text-slate-900 leading-tight mb-4">${n.titulo}</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">${n.desc}</p>
-                        <div class="mt-8 pt-6 border-t border-slate-50 text-teal-600 font-bold text-sm">
-                            Leer análisis y participar en la consulta →
+                <article onclick="window.location.href='${n.link}'" class="group bg-white rounded-[3rem] border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer">
+                    
+                    <div class="w-full h-64 md:h-80 overflow-hidden bg-slate-50">
+                        <img src="${n.imagen}" alt="Noticia Sanidad" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-8 md:p-10">
+                        <div class="mb-4">
+                            <span class="${n.color} text-[11px] font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider">
+                                ${n.tag}
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-4 group-hover:text-teal-600 transition-colors">
+                            ${n.titulo}
+                        </h3>
+                        
+                        <p class="text-slate-500 leading-relaxed text-base mb-8">
+                            ${n.desc}
+                        </p>
+                        
+                        <div class="flex items-center text-teal-600 font-bold text-lg">
+                            <span>Leer análisis y participar</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
                         </div>
                     </div>
                 </article>
             `).join('');
         }
 
-        // FUNCIÓN PARA CAMBIAR ENTRE PESTAÑAS (NOTICIAS, EMPLEO, PROYECTO)
         function showSection(sectionId) {
             document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden-section'));
             document.getElementById('section-' + sectionId).classList.remove('hidden-section');
@@ -174,7 +190,6 @@
             }
         }
 
-        // Ejecutar al cargar la página
         renderNews();
     </script>
 </body>

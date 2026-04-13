@@ -176,6 +176,25 @@
                 </article>
             `).join('');
         }
+function showSection(sectionId) {
+            // Oculta todas las secciones
+            document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden-section'));
+            // Muestra la sección seleccionada
+            document.getElementById('section-' + sectionId).classList.remove('hidden-section');
+            
+            // Actualiza el estilo de los botones del menú
+            document.querySelectorAll('.nav-link').forEach(l => {
+                l.classList.remove('active-link');
+                l.classList.add('text-slate-500');
+            });
+            const btn = document.getElementById('link-' + sectionId);
+            if (btn) {
+                btn.classList.add('active-link');
+                btn.classList.remove('text-slate-500');
+            }
+        }
+
+        // Arrancamos el motor
         renderNews();
     </script>
 </body>
